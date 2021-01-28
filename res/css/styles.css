@@ -1,0 +1,21 @@
+/* base color: #54a0ff */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #54a0ff;
+  height: 100vh;
+}
+.main_container {
+  max-width: 800px;
+  min-height: 500px;
+  margin: 60px auto;
+}
+.login_container {
+  background: #fff;
+  width: 100%;
+  height: max-content;
+  padding: 30px;
+}

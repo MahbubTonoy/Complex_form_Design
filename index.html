@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Complex Form Design</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- base css stylesheet -->
+    <link rel="stylesheet" href="res/css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="login_container">
+        <h1>Login</h1>
+        <form action="index.html" method="POST">
+          <input type="text" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+          <input type="checkbox" name="stay_loggedin" id="stayLoggedin" />
+          <label for="stayLoggedin">Stay Logged In</label>
+          <input type="submit" class="submit" value="Log In" />
+        </form>
+      </div>
+      <div class="registration_container">
+        <h2>Register</h2>
+        <form action="index.html" method="POST">
+          <div class="reg_block">
+            <div class="block_info">Basic Info</div>
+            <span class="steps">Step 1 of 4</span>
+            <input type="text" name="fname" placeholder="First Name" />
+            <input type="text" name="lname" placeholder="Last Name" />
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+          </div>
+          <div class="reg_block">
+            <div class="block_info">Contact Info</div>
+            <span class="steps">Step 2 of 4</span>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="number" name="number" placeholder="Phone Number" />
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+          </div>
+          <div class="reg_block">
+            <div class="block_info">Login Info</div>
+            <span class="steps">Step 3 of 4</span>
+            <input type="text" name="username" placeholder="Choose Username" />
+            <input type="password" name="password" placeholder="Choose Password" />
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+          </div>
+          <div class="reg_block">
+            <div class="block_info">Terms of Service</div>
+            <span class="steps">Step 4 of 4</span>
+            <textarea class="tos">
+
+            </textarea>
+            <input type="checkbox" id="agree" name="agree"/> <label for="agree">I agree with the Terms of Services</label>
+            <button id="prev">Previous</button>
+            <button type="submit" id="next">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- base javascript file -->
+    <script type="text/javascript" src="res/js/main.js"></script>
+  </body>
+</html>
