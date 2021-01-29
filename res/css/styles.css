@@ -1,8 +1,11 @@
+/* base font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 /* base color: #54a0ff */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   background: #54a0ff;
@@ -16,6 +19,19 @@ body {
 .login_container {
   background: #fff;
   width: 100%;
-  height: max-content;
+  height: 100%;
   padding: 30px;
+}
+.login_container h1 {
+  font-size: 35px;
+  font-family: 400;
+  color: #404040;
+  padding: 10px 0;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+}
+
+
+.registration_container {
+  display: none;
 }
