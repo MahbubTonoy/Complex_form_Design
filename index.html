@@ -1,10 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Complex Form Design</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <!-- base css stylesheet -->
@@ -13,14 +16,48 @@
   <body>
     <div class="main_container">
       <div class="login_container">
-        <h1>Login</h1>
+        <h1>Welcome to Github</h1>
+        <h2>Please Sign in to continue</h2>
         <form action="index.html" method="POST">
-          <input type="text" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
-          <input type="checkbox" name="stay_loggedin" id="stayLoggedin" />
-          <label for="stayLoggedin">Stay Logged In</label>
-          <input type="submit" class="submit" value="Log In" />
+          <div class="input_container">
+            <input
+              type="text"
+              class="input_field"
+              id="login_username"
+              name="username"
+              autocomplete="off"
+              required
+            />
+            <label for="login_username">
+              <span>Username</span>
+            </label>
+          </div>
+          <div class="input_container">
+            <input
+              type="password"
+              class="input_field"
+              id="login_password"
+              name="password"
+              required
+            />
+            <label for="login_password">
+              <span>Password</span>
+            </label>
+          </div>
+          <div class="checkbox_container">
+            <input type="checkbox" name="stay_loggedin" id="stayLoggedin" />
+            <label for="stayLoggedin">Stay Logged In</label>
+          </div>
+          <input type="submit" class="submit btn" value="Sign In" />
+          <label class="forgotpass" for="forgotpass">Forgot Password?</label>
         </form>
+        <div class="author_container">
+          <div class="author">
+            Developed By: <b>Mahbub Rashid Tonoy</b>
+            <a href="https://www.facebook.com/ThizIzTonoy" target="_BLANK">Facebook</a>
+            <a href="https://github.com/MahbubTonoy" target="_BLANK">Github</a>
+          </div>
+        </div>
       </div>
       <div class="registration_container">
         <h2>Register</h2>
@@ -45,17 +82,20 @@
             <div class="block_info">Login Info</div>
             <span class="steps">Step 3 of 4</span>
             <input type="text" name="username" placeholder="Choose Username" />
-            <input type="password" name="password" placeholder="Choose Password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Choose Password"
+            />
             <button id="prev">Previous</button>
             <button id="next">Next</button>
           </div>
           <div class="reg_block">
             <div class="block_info">Terms of Service</div>
             <span class="steps">Step 4 of 4</span>
-            <textarea class="tos">
-
-            </textarea>
-            <input type="checkbox" id="agree" name="agree"/> <label for="agree">I agree with the Terms of Services</label>
+            <textarea class="tos"> </textarea>
+            <input type="checkbox" id="agree" name="agree" />
+            <label for="agree">I agree with the Terms of Services</label>
             <button id="prev">Previous</button>
             <button type="submit" id="next">Register</button>
           </div>

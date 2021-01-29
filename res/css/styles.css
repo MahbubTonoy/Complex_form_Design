@@ -12,7 +12,7 @@ body {
   height: 100vh;
 }
 .main_container {
-  max-width: 800px;
+  max-width: 500px;
   min-height: 500px;
   margin: 60px auto;
 }
@@ -21,6 +21,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 30px;
+  padding-bottom: 0;
 }
 .login_container h1 {
   font-size: 35px;
@@ -30,7 +31,115 @@ body {
   border-bottom: 1px solid #c0c0c0;
   margin-bottom: 20px;
 }
+.login_container h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #404040;
+}
+.input_container {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.input_container .input_field{
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding-top: 10px;
+  border-bottom: 1px solid #c0c0c0;
+  font-size: 16px;
+  outline: none;
+}
+.input_container .input_field:invalid {
+  box-shadow: none;
+}
+.input_container label {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.input_container label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: block;
+  height: 95%;
+  width: 100%;
+  border-bottom: 2px solid #54a0ff;
+  transition: all 0.3s ease-in-out;
+}
+.input_container label span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  pointer-events: none;
+  color: #909090;
 
+  transition: all 0.3s ease-in-out;
+}
+.input_container .input_field:focus +label span,
+.input_container .input_field:valid +label span{
+  padding-top: 0px;
+  color: #54a0ff;
+  font-size: 14px;
+}
+.input_container .input_field:focus +label::after,
+.input_container .input_field:valid +label::after{
+  position: absolute;
+  left: 0;
+}
+.checkbox_container {
+  margin: 15px 0;
+}
+.checkbox_container label {
+  margin-left: 10px;
+  color: #404040;
+}
+.checkbox_container label, #stayLoggedin {
+  cursor: pointer;
+}
+.btn {
+  border: 1px solid #0f5ab6;
+  color: #404040;
+  background: #fff;
+  padding: 8px 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btn:hover {
+  background: #0f5ab6;
+  color: #fff;
+}
+.forgotpass, a {
+  color: #54a0ff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.author_container {
+  margin-top: 40px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #606060;
+  border-top: 1px solid #c0c0c0;
+}
+.author_container b {
+  /* font-style: italic; */
+  font-weight: 600;
+}
+.author_container a {
+  float: right;
+}
 
 .registration_container {
   display: none;
