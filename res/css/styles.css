@@ -115,6 +115,7 @@ body {
   max-width: 500px;
   min-height: 500px;
   margin: 60px auto;
+  overflow: hidden;
 }
 
 .checkbox_container {
@@ -141,12 +142,16 @@ body {
   background: #0f5ab6;
   color: #fff;
 }
-.forgotpass,
 a, .a {
   color: #54a0ff;
   text-decoration: none;
   cursor: pointer;
   margin-left: 10px;
+}
+.signup_label {
+  display: block;
+  margin-top: 15px;
+  margin-left: 0;
 }
 .author_container {
   margin-top: 40px;
@@ -165,8 +170,9 @@ a, .a {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -100%;
   background: #eb4d4b;
+  transition: all 0.3s ease-in-out;
   /* border: 1px solid #fff; */
 }
 .reg_block_container {
@@ -229,4 +235,27 @@ a, .a {
 }
 .registration_container .a {
   color: #fff;
+}
+.registration_container .tos {
+  width: 100%;
+  height: 100px;
+}
+.tos_block .checkbox_container {
+  margin: 5px 0;
+}
+.tos_block .checkbox_container  label {
+  color: #fff;
+}
+.tos_block .btn {
+  margin-top: 0px;
+}
+
+/* trigger checkbox disappear */
+.hidecheck {
+  display: none;
+}
+
+/* trigger by click */
+#regId:checked ~ .main_container .registration_container {
+  right: 0;
 }
