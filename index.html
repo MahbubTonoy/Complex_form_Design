@@ -13,12 +13,19 @@
     <!-- base css stylesheet -->
     <link rel="stylesheet" href="res/css/styles.css" type="text/css" />
   </head>
+
   <body>
+    <!-- main container contains login, registration and account recovery container -->
     <div class="main_container">
-      <div class="login_container">
+      <!-- login container contain login form and about section -->
+      <div class="login_container container">
+        <!-- login heading -->
         <h1>Welcome to Github</h1>
         <h2>Please Sign in to continue</h2>
+        <!-- login heading end -->
+        <!-- login form starts -->
         <form action="index.html" method="POST">
+          <!-- Note: every input_container contain inputs and custom placeholders and design -->
           <div class="input_container">
             <input
               type="text"
@@ -44,64 +51,200 @@
               <span>Password</span>
             </label>
           </div>
+          <!-- checkbox container -->
           <div class="checkbox_container">
             <input type="checkbox" name="stay_loggedin" id="stayLoggedin" />
             <label for="stayLoggedin">Stay Logged In</label>
           </div>
+          <!-- checkbox container end -->
+          <!-- submission section -->
           <input type="submit" class="submit btn" value="Sign In" />
           <label class="forgotpass" for="forgotpass">Forgot Password?</label>
+          <!-- submission section end -->
         </form>
+        <!-- login form end -->
+        <!-- author container cotains author info and hyperlinks -->
         <div class="author_container">
           <div class="author">
             Developed By: <b>Mahbub Rashid Tonoy</b>
-            <a href="https://www.facebook.com/ThizIzTonoy" target="_BLANK">Facebook</a>
+            <a href="https://www.facebook.com/ThizIzTonoy" target="_BLANK"
+              >Facebook</a
+            >
             <a href="https://github.com/MahbubTonoy" target="_BLANK">Github</a>
           </div>
         </div>
+        <!-- author container end -->
       </div>
-      <div class="registration_container">
-        <h2>Register</h2>
+      <!-- login container end -->
+
+      <!-- registration_container contain registration blocks -->
+      <div class="registration_container container">
+        <!-- registration heading -->
+        <h3>Github Registration</h3>
+        <h4>Please sign up to continue</h4>
+        <!-- registration heading end -->
+        <!-- registration form -->
         <form action="index.html" method="POST">
-          <div class="reg_block">
-            <div class="block_info">Basic Info</div>
-            <span class="steps">Step 1 of 4</span>
-            <input type="text" name="fname" placeholder="First Name" />
-            <input type="text" name="lname" placeholder="Last Name" />
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
+          <!-- Note: as we don't want to add css in form section for flexibility we added reg block container into form and reg_block_container contain registration blocks -->
+          <div class="reg_block_container">
+            <div class="reg_block_flex" id="blockSlide">
+              <div class="reg_block">
+                <!-- block info and step counter -->
+                <div class="block_info">Basic Info</div>
+                <span class="steps">Step 1 of 4</span>
+                <!-- block info and step counter end -->
+                <div class="input_container">
+                  <input
+                    type="text"
+                    class="input_field"
+                    id="reg_fname"
+                    name="fname"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_fname">
+                    <span>First Name</span>
+                  </label>
+                </div>
+                <div class="input_container">
+                  <input
+                    type="text"
+                    class="input_field"
+                    id="reg_lname"
+                    name="lname"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_lname">
+                    <span>Last Name</span>
+                  </label>
+                </div>
+                <span id="next" onclick="prevNextHandler(-100, ['reg_fname','reg_lname'])" class="btn">Next</span>
+              </div>
+              <div class="reg_block">
+                <!-- block info -->
+                <div class="block_info">Contact Info</div>
+                <span class="steps">Step 2 of 4</span>
+                <!-- block info end -->
+                <div class="input_container">
+                  <input
+                    type="text"
+                    class="input_field"
+                    id="reg_email"
+                    name="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_email">
+                    <span>Email</span>
+                  </label>
+                </div>
+                <div class="input_container">
+                  <input
+                    type="text"
+                    class="input_field"
+                    id="reg_phone"
+                    name="phone"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_phone">
+                    <span>Phone</span>
+                  </label>
+                </div>
+                <span id="prev" onclick="prevNextHandler(0)" class="btn">Previous</span>
+                <span id="next" onclick="prevNextHandler(-200, ['reg_email','reg_phone'])" class="btn">Next</span>
+              </div>
+              <div class="reg_block">
+                <div class="block_info">Login Info</div>
+                <span class="steps">Step 3 of 4</span>
+                <div class="input_container">
+                  <input
+                    type="text"
+                    class="input_field"
+                    id="reg_username"
+                    name="username"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_username">
+                    <span>Username</span>
+                  </label>
+                </div>
+                <div class="input_container">
+                  <input
+                    type="password"
+                    class="input_field"
+                    id="reg_password"
+                    name="password"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="reg_password">
+                    <span>Password</span>
+                  </label>
+                </div>
+                <span id="prev" onclick="prevNextHandler(-100)" class="btn">Previous</span>
+                <span id="next" onclick="prevNextHandler(-300, ['reg_username','reg_password'])" class="btn">Next</span>
+              </div>
+              <div class="reg_block">
+                <div class="block_info">Terms of Service</div>
+                <span class="steps">Step 4 of 4</span>
+
+                <!-- terms of service textarea -->
+                <textarea class="tos">
+  1. Terms
+  
+                  By accessing this Website, accessible from https://mahbubtonoy.github.io/Complex_form_Design/, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+                  2. Use License
+                  
+                  Permission is granted to temporarily download one copy of the materials on Complex Form Design's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                  
+                      modify or copy the materials;
+                      use the materials for any commercial purpose or for any public display;
+                      attempt to reverse engineer any software contained on Complex Form Design's Website;
+                      remove any copyright or other proprietary notations from the materials; or
+                      transferring the materials to another person or "mirror" the materials on any other server.
+                  
+                  This will let Complex Form Design to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator and the Privacy Policy Generator.
+                  3. Disclaimer
+                  
+                  All the materials on Complex Form Design’s Website are provided "as is". Complex Form Design makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Complex Form Design does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+                  4. Limitations
+                  
+                  Complex Form Design or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on Complex Form Design’s Website, even if Complex Form Design or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+                  5. Revisions and Errata
+                  
+                  The materials appearing on Complex Form Design’s Website may include technical, typographical, or photographic errors. Complex Form Design will not promise that any of the materials in this Website are accurate, complete, or current. Complex Form Design may change the materials contained on its Website at any time without notice. Complex Form Design does not make any commitment to update the materials.
+                  6. Links
+                  
+                  Complex Form Design has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Complex Form Design of the site. The use of any linked website is at the user’s own risk.
+                  7. Site Terms of Use Modifications
+                  
+                  Complex Form Design may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+                  8. Your Privacy
+                  
+                  Please read our Privacy Policy.
+                  9. Governing Law
+                  
+                  Any claim related to Complex Form Design's Website shall be governed by the laws of bd without regards to its conflict of law provisions.</textarea
+                >
+                <!-- tos textarea end -->
+                <input type="checkbox" id="agree" name="agree" required />
+                <label for="agree">I agree with the Terms of Services</label>
+                <span id="prev" onclick="prevNextHandler(-400)" class="btn">Previous</span>
+                <button type="submit" id="next" class="btn">Register</button>
+              </div>
+            </div>
           </div>
-          <div class="reg_block">
-            <div class="block_info">Contact Info</div>
-            <span class="steps">Step 2 of 4</span>
-            <input type="email" name="email" placeholder="Email" />
-            <input type="number" name="number" placeholder="Phone Number" />
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
-          </div>
-          <div class="reg_block">
-            <div class="block_info">Login Info</div>
-            <span class="steps">Step 3 of 4</span>
-            <input type="text" name="username" placeholder="Choose Username" />
-            <input
-              type="password"
-              name="password"
-              placeholder="Choose Password"
-            />
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
-          </div>
-          <div class="reg_block">
-            <div class="block_info">Terms of Service</div>
-            <span class="steps">Step 4 of 4</span>
-            <textarea class="tos"> </textarea>
-            <input type="checkbox" id="agree" name="agree" />
-            <label for="agree">I agree with the Terms of Services</label>
-            <button id="prev">Previous</button>
-            <button type="submit" id="next">Register</button>
-          </div>
+          <!-- registration block container end -->
+          <label for="regId" class="a">Already Have an Account? Let's Sign in</label>
         </form>
+        <!-- registration form end -->
       </div>
+      <!-- registration_container end -->
     </div>
+    <!-- main container end -->
     <!-- base javascript file -->
     <script type="text/javascript" src="res/js/main.js"></script>
   </body>
