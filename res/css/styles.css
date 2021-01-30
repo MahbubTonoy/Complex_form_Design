@@ -59,6 +59,8 @@ body {
   border-bottom: 1px solid #c0c0c0;
   font-size: 16px;
   outline: none;
+
+  background: transparent;
 }
 .input_container .input_field:invalid {
   box-shadow: none;
@@ -171,7 +173,8 @@ a, .a {
   position: absolute;
   top: 0;
   right: -100%;
-  background: #eb4d4b;
+  background: #2980b9;
+  /* background: #eb4d4b; */
   transition: all 0.3s ease-in-out;
   /* border: 1px solid #fff; */
 }
@@ -201,7 +204,6 @@ a, .a {
   /* border-bottom: 1px solid #ccc; */
 }
 .registration_container .input_field{
-  background: transparent;
   color: #fff;
 }
 .registration_container .input_container .input_field:focus + label span,
@@ -209,8 +211,9 @@ a, .a {
   color: #fff;
 }
 .registration_container .input_container label span {
-  color: #eee;
+  color: #d0d0d0;
 }
+
 .registration_container .input_container label::after {
   border-bottom: 2px solid #eee;
 }
@@ -250,6 +253,47 @@ a, .a {
   margin-top: 0px;
 }
 
+
+
+.recovery_container .btn {
+  margin-top: 20px;
+}
+.recovery_container {
+  height: 100%;
+  width: 100%;
+  background: #2ecc71;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+.recovery_container .input_container .input_field {
+  border-bottom-color: #404040;
+}
+.recovery_container .input_container label span{
+  color: #606060;
+}
+.recovery_container .a {
+  display: block;
+  color: #404040;
+  margin: 0;
+  margin-top: 10px;
+}
+.recovery_container .btn {
+  background: #2ecc71;
+  color: #404040;
+  border-color: #404040;
+  transition: all 0.3s ease-in-out;
+}
+.recovery_container .btn:hover {
+  background:#404040;
+  color: #fff;
+}
+.recovery_container .input_container .input_field:focus + label span,
+.recovery_container .input_container .input_field:valid + label span {
+  color: #404040;
+}
+
 /* trigger checkbox disappear */
 .hidecheck {
   display: none;
@@ -258,4 +302,10 @@ a, .a {
 /* trigger by click */
 #regId:checked ~ .main_container .registration_container {
   right: 0;
+}
+#forgotpass:checked ~ .main_container .recovery_container {
+  left: 0;
+}
+.recovery_container h3 {
+  border-bottom: 1px solid #404040;
 }
