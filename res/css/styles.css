@@ -309,3 +309,20 @@ a, .a {
 .recovery_container h3 {
   border-bottom: 1px solid #404040;
 }
+
+/* responsive media query */
+@media only screen and (max-width: 450px) {
+  .main_container {
+    height: 550px;
+  }
+  .author_container a {
+    float: none;
+    display: block;
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 385px) {
+  .main_container {
+    height: 600px;
+  }
+}
